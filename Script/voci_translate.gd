@@ -59,7 +59,7 @@ func _on_check_pressed():
 		$LineEdit.clear()
 		$LineEdit.editable = false
 
-# new again
+# new
 
 
 func _on_next_pressed() -> void:
