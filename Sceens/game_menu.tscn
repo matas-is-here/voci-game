@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://bkw08k6lwj8df"]
+
+[ext_resource type="Texture2D" uid="uid://cvciqahsj7d6" path="res://voci_game_bg.png" id="1_217s7"]
+[ext_resource type="Script" uid="uid://da4fl78rmyqhn" path="res://Script/game_menu.gd" id="1_lk4i1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_217s7"]
+bg_color = Color(1, 0.8865384, 0.90520155, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_color = Color(0, 0, 0, 0.14117648)
+shadow_size = 3
+shadow_offset = Vector2(10, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lk4i1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1f3k4"]
+bg_color = Color(0.65012825, 0.6501283, 0.6501282, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 9
+shadow_color = Color(0, 0, 0, 0.14117648)
+shadow_size = 3
+shadow_offset = Vector2(10, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jijr4"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_color = Color(0, 0, 0, 0.14117648)
+shadow_size = 3
+shadow_offset = Vector2(10, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4mstf"]
+bg_color = Color(0.6830772, 0.6830774, 0.6830771, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 9
+shadow_color = Color(0, 0, 0, 0.14117648)
+shadow_size = 3
+
+[node name="GameMenu" type="Control" unique_id=571275605]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lk4i1")
+
+[node name="Bg" type="TextureRect" parent="." unique_id=923225049]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_217s7")
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=901626387]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -159.0
+offset_top = -41.0
+offset_right = 159.0
+offset_bottom = 237.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 18
+theme_override_constants/v_separation = 18
+columns = 2
+
+[node name="Bounce Ball" type="Button" parent="GridContainer" unique_id=110398317]
+custom_minimum_size = Vector2(170, 130)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_217s7")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_lk4i1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1f3k4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jijr4")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_4mstf")
+text = "Bounce
+Ball"
+
+[node name="None" type="Button" parent="GridContainer" unique_id=388276645]
+custom_minimum_size = Vector2(170, 130)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_217s7")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_lk4i1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1f3k4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jijr4")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_4mstf")
+
+[node name="None2" type="Button" parent="GridContainer" unique_id=950754543]
+custom_minimum_size = Vector2(170, 130)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_217s7")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_lk4i1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1f3k4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jijr4")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_4mstf")
+
+[node name="None3" type="Button" parent="GridContainer" unique_id=1819686]
+custom_minimum_size = Vector2(170, 130)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_217s7")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_lk4i1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1f3k4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jijr4")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_4mstf")
+
+[connection signal="pressed" from="GridContainer/Bounce Ball" to="." method="_on_bounce_ball_pressed"]

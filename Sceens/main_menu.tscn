@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://dbimiamejfy5i"]
+
+[ext_resource type="Script" uid="uid://4qov36bdqv5f" path="res://Script/main_menu.gd" id="1_et17d"]
+[ext_resource type="Texture2D" uid="uid://cvciqahsj7d6" path="res://voci_game_bg.png" id="1_jv55l"]
+[ext_resource type="FontFile" uid="uid://jaa0qx5peknx" path="res://Bingbam Demo.otf" id="3_pq48y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jv55l"]
+bg_color = Color(1, 0.8865384, 0.90520155, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_color = Color(0, 0, 0, 0.14117648)
+shadow_size = 3
+shadow_offset = Vector2(10, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vnxek"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_niywi"]
+bg_color = Color(0.65012825, 0.6501283, 0.6501282, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 9
+shadow_color = Color(0, 0, 0, 0.14117648)
+shadow_size = 3
+shadow_offset = Vector2(10, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_et17d"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_color = Color(0, 0, 0, 0.14117648)
+shadow_size = 3
+shadow_offset = Vector2(10, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pq48y"]
+bg_color = Color(0.6830772, 0.6830774, 0.6830771, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 9
+shadow_color = Color(0, 0, 0, 0.14117648)
+shadow_size = 3
+
+[node name="MainMenu" type="Control" unique_id=1042044160]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_et17d")
+
+[node name="Bg" type="TextureRect" parent="." unique_id=1902909094]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_jv55l")
+
+[node name="Button_Container" type="VBoxContainer" parent="." unique_id=136676081]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.57100004
+offset_left = -212.0
+offset_top = -55.0
+offset_right = 212.0
+offset_bottom = 240.99197
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="Start" type="Button" parent="Button_Container" unique_id=931648595]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_jv55l")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_vnxek")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_niywi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_et17d")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_pq48y")
+text = "Start Lesson"
+
+[node name="Other" type="Button" parent="Button_Container" unique_id=899363620]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_jv55l")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_vnxek")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_niywi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_et17d")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_pq48y")
+text = "Games"
+
+[node name="Exit" type="Button" parent="Button_Container" unique_id=1583964322]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_jv55l")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_vnxek")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_niywi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_et17d")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_pq48y")
+text = "Exit"
+
+[node name="Label" type="Label" parent="." unique_id=2033721498]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -282.0
+offset_top = 78.0
+offset_right = 282.0
+offset_bottom = 230.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_pq48y")
+theme_override_font_sizes/font_size = 167
+text = "VociPig"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button_Container/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button_Container/Other" to="." method="_on_other_pressed"]
+[connection signal="pressed" from="Button_Container/Exit" to="." method="_on_exit_pressed"]

@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bngfidvh08mh0"]
+
+[sub_resource type="GDScript" id="GDScript_i4kyh"]
+script/source = "extends CharacterBody2D
+
+
+const SPEED = 600.0
+const SLOW_DOWN = 200.0
+
+func _physics_process(delta: float) -> void:
+
+	var direction := Input.get_axis(\"ui_left\", \"ui_right\")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SLOW_DOWN)
+
+	move_and_slide()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_881ew"]
+size = Vector2(258.375, 40)
+
+[node name="Pad" type="CharacterBody2D" unique_id=973671824]
+position = Vector2(147, 43)
+script = SubResource("GDScript_i4kyh")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1378482143]
+offset_left = -128.0
+offset_top = -19.0
+offset_right = 128.0
+offset_bottom = 22.0
+color = Color(0.55095845, 0.5509585, 0.55095845, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=733285776]
+position = Vector2(-0.1875, 0)
+shape = SubResource("RectangleShape2D_881ew")

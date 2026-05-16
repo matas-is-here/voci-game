@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://c08qmxnx3pbct"]
+
+[ext_resource type="Texture2D" uid="uid://cvciqahsj7d6" path="res://voci_game_bg.png" id="1_h5koc"]
+[ext_resource type="Script" uid="uid://d2js07762njt8" path="res://Script/end_screen.gd" id="1_iqxcn"]
+[ext_resource type="FontFile" uid="uid://jaa0qx5peknx" path="res://Bingbam Demo.otf" id="3_0ui34"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h5koc"]
+bg_color = Color(1, 0.8865384, 0.90520155, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_color = Color(0, 0, 0, 0.14117648)
+shadow_size = 3
+shadow_offset = Vector2(10, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iqxcn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ui34"]
+bg_color = Color(0.65012825, 0.6501283, 0.6501282, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 9
+shadow_color = Color(0, 0, 0, 0.14117648)
+shadow_size = 3
+shadow_offset = Vector2(10, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gui35"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_color = Color(0, 0, 0, 0.14117648)
+shadow_size = 3
+shadow_offset = Vector2(10, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_34o61"]
+bg_color = Color(0.6830772, 0.6830774, 0.6830771, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 9
+shadow_color = Color(0, 0, 0, 0.14117648)
+shadow_size = 3
+
+[node name="EndScreen" type="Control" unique_id=1121076925]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iqxcn")
+
+[node name="Bg" type="TextureRect" parent="." unique_id=68918157]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_h5koc")
+
+[node name="Home" type="Button" parent="." unique_id=1991686444]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -124.0
+offset_top = -205.0
+offset_right = 124.0
+offset_bottom = -105.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_h5koc")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_iqxcn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0ui34")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gui35")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_34o61")
+text = "Home!"
+
+[node name="Label" type="Label" parent="." unique_id=108878577]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.5
+offset_top = -211.0
+offset_right = 196.5
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_0ui34")
+theme_override_font_sizes/font_size = 100
+text = "You Win"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Home" to="." method="_on_home_pressed"]

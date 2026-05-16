@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://c4lvgg78gycjy"]
+
+[ext_resource type="PackedScene" uid="uid://bngfidvh08mh0" path="res://Sceens/paddle.tscn" id="2_th7ck"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dvjgg"]
+size = Vector2(965.75, 475.875)
+
+[node name="BounceBall" type="Control" unique_id=1075874040]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bg" type="ColorRect" parent="." unique_id=2045446753]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.14767182, 0.14767179, 0.14767179, 1)
+
+[node name="GameField" type="ColorRect" parent="." unique_id=2094823993]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -485.5
+offset_top = -241.75
+offset_right = 485.5
+offset_bottom = 241.75
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.26839805, 0.26839802, 0.26839802, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameField" unique_id=1328520020]
+position = Vector2(485.625, 239.8125)
+shape = SubResource("RectangleShape2D_dvjgg")
+
+[node name="Paddle" parent="." unique_id=1895017245 instance=ExtResource("2_th7ck")]
+position = Vector2(710, 573)
