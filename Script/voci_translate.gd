@@ -4,7 +4,7 @@ extends Control
 func _ready() -> void:
 	if (vars.is_english == true):
 		$TextLabel.text = "Translate to English:"
-	elif (vars.is_english == true):
+	elif (vars.is_english == false):
 		$TextLabel.text = "Translate to German:"
 	$CountLabel.text = str(vars.count) + "/" + str(vars.max_count)
 	$Next.visible = false
@@ -59,7 +59,7 @@ func _on_check_pressed():
 		$LineEdit.clear()
 		$LineEdit.editable = false
 
-	
+# new
 
 
 func _on_next_pressed() -> void:
@@ -73,4 +73,3 @@ func _on_next_pressed() -> void:
 			vars.count = 1
 		
 		$CountLabel.text = str(vars.count) + "/" + str(vars.max_count)
-		
