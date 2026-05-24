@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dod8tuqg62kq"]
+
+[ext_resource type="AudioStream" uid="uid://ix4xdrds1r6d" path="res://ncone-soft-piano-loop-192098.mp3" id="1_p5cjb"]
+[ext_resource type="Script" uid="uid://dbooxebkaf4es" path="res://Sceens/music_player.gd" id="2_dka40"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer" unique_id=1139064321]
+stream = ExtResource("1_p5cjb")
+volume_db = -15.0
+script = ExtResource("2_dka40")
