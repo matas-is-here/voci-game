@@ -318,18 +318,27 @@ text = "German -> English"
 
 [node name="HScrollBar" type="HScrollBar" parent="." unique_id=1572949002]
 custom_minimum_size = Vector2(0, 20)
-layout_mode = 0
-offset_left = 265.0
-offset_top = 313.0
-offset_right = 852.0
-offset_bottom = 353.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -293.5
+offset_top = -20.0
+offset_right = 293.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_styles/scroll = SubResource("StyleBoxFlat_v85e2")
 theme_override_styles/grabber = SubResource("StyleBoxFlat_mtqgh")
 theme_override_styles/grabber_highlight = SubResource("StyleBoxFlat_ols5t")
 theme_override_styles/grabber_pressed = SubResource("StyleBoxFlat_qqfy3")
+min_value = 1.0
 max_value = 30.0
 step = 1.0
 page = 5.0
+value = 1.0
 
 [node name="MaxCountLabel" type="Label" parent="." unique_id=838558918]
 layout_mode = 1
