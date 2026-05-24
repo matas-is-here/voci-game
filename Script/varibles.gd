@@ -27,6 +27,9 @@ var right = false
 # other
 var ger_word = ""
 
+var right_word = ""
+var trans_word = ""
+
 # functions
 
 func get_word_len() -> int:
