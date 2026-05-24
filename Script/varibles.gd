@@ -24,6 +24,7 @@ var this_word_int = 0
 
 var right = false
 
+
 # other
 var ger_word = ""
 

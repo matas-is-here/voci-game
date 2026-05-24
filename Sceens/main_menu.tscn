@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://4qov36bdqv5f" path="res://Script/main_menu.gd" id="1_et17d"]
 [ext_resource type="Texture2D" uid="uid://cvciqahsj7d6" path="res://voci_game_bg.png" id="1_jv55l"]
 [ext_resource type="FontFile" uid="uid://jaa0qx5peknx" path="res://Bingbam Demo.otf" id="3_pq48y"]
+[ext_resource type="AudioStream" uid="uid://ix4xdrds1r6d" path="res://ncone-soft-piano-loop-192098.mp3" id="4_vnxek"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jv55l"]
 bg_color = Color(1, 0.8865384, 0.90520155, 1)
@@ -142,6 +143,11 @@ theme_override_font_sizes/font_size = 167
 text = "VociPig"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=785986541]
+stream = ExtResource("4_vnxek")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="pressed" from="Button_Container/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_Container/Other" to="." method="_on_other_pressed"]
